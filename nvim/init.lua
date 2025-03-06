@@ -21,3 +21,11 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
+vim.opt.scrolloff = 8 -- 8 line pading at bottom
+
+vim.opt.colorcolumn = "80"
+vim.opt.termguicolors = true
+
+-- move lines up and down when they are highlighted
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
