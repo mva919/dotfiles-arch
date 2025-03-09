@@ -5,7 +5,25 @@ return {
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
-      ensure_installed = { "go", "javascript", "typescript", "java", "python", "bash", "html", "json", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+      ensure_installed = {
+        "go",
+        "javascript",
+        "typescript",
+        "java",
+        "python",
+        "bash",
+        "html",
+        "json",
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "markdown",
+        "markdown_inline",
+        "bash",
+      },
+      ignore_install = {},
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = false,
@@ -25,7 +43,6 @@ return {
         -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
         -- the name of the parser)
         -- list of language that will be disabled
-        disable = {},
         -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
         disable = function(lang, buf)
           local max_filesize = 100 * 1024 -- 100 KB
@@ -42,5 +59,5 @@ return {
         additional_vim_regex_highlighting = false,
       },
     })
-  end
+  end,
 }
