@@ -29,6 +29,7 @@ return {
       servers = {
         lua_ls = {},
         pylsp = {},
+        clangd = {},
       },
     },
     config = function(_, opts)
